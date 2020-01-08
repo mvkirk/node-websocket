@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="messages">
+    <li>
+      <ul *ngFor="let m of messages">
+        {{ m.content }}
+      </ul>  
+    </li>
+  </div>
+
+  <div class="message">
+    <form>
+      <div>
+        <input matInput name="message" [(ngModel)]="message.content" />
+
+        <button type="submit" mat-mini-fab color="accent" (click)="send()">
+          <mat-icon>send</mat-icon>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
